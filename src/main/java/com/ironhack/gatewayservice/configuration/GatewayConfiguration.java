@@ -7,6 +7,11 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Gateway Configuration.
+ * Routes to the microservices.
+ * Implements authentication filter for all routes.
+ */
 @Configuration
 @RequiredArgsConstructor
 public class GatewayConfiguration {

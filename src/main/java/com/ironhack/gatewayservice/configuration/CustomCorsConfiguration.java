@@ -10,7 +10,10 @@ import org.springframework.web.reactive.config.WebFluxConfigurer;
 
 import static org.springframework.http.HttpHeaders.SET_COOKIE;
 
-
+/**
+ * CORS Configuration.
+ * Based on: https://stackoverflow.com/questions/61909640/how-to-disable-cors-in-spring-cloud-gateway
+ */
 @Configuration
 public class CustomCorsConfiguration implements WebFluxConfigurer {
 
