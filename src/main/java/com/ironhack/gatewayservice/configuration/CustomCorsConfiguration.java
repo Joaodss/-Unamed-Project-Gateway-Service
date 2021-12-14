@@ -24,6 +24,7 @@ public class CustomCorsConfiguration implements WebFluxConfigurer {
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.addAllowedMethod("*");
         corsConfiguration.addAllowedOrigin("http://109.237.25.160");
+        corsConfiguration.addAllowedOrigin("http://localhost:4200");
         corsConfiguration.addExposedHeader(SET_COOKIE);
         UrlBasedCorsConfigurationSource corsConfigurationSource = new UrlBasedCorsConfigurationSource();
         corsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
@@ -34,7 +35,7 @@ public class CustomCorsConfiguration implements WebFluxConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowCredentials(true)
-                .allowedOrigins("http://109.237.25.160")
+                .allowedOrigins("http://109.237.25.160", "http://localhost:4200")
                 .allowedHeaders("*")
                 .allowedMethods("*")
                 .exposedHeaders(SET_COOKIE);
